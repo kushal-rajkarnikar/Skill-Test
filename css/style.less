@@ -39,6 +39,17 @@ body{
         padding-bottom: 10px;
         height: auto;
         position: relative;
+        .breadcrumb{
+            color: black;
+            &:first-child{
+                color: @color-dropdown-bg;
+                font-size: 2em;
+            }     
+            &:before{
+                color: black;
+                vertical-align: bottom;
+            }
+        }
         .tabs{
             .indicator{
                 background-color: transparent;

@@ -31,6 +31,17 @@ body .contract {
   height: auto;
   position: relative;
 }
+body .contract .breadcrumb {
+  color: black;
+}
+body .contract .breadcrumb:first-child {
+  color: #4AB6C2;
+  font-size: 2em;
+}
+body .contract .breadcrumb:before {
+  color: black;
+  vertical-align: bottom;
+}
 body .contract .tabs .indicator {
   background-color: transparent;
 }
