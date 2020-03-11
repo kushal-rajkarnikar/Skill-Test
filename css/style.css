@@ -98,6 +98,12 @@ body .contract .tabs .tab a > i.material-icons.edit {
   left: 55px;
   bottom: 35px;
 }
+@media (max-width: 575px) {
+  body .contract .tabs .tab a > i.material-icons.edit {
+    left: unset;
+    right: 10px;
+  }
+}
 body .contract .tabs .tab a:hover,
 body .contract .tabs .tab a.active,
 body .contract .tabs .tab a:focus,
