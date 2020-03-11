@@ -1,8 +1,9 @@
 :root {
-  --body-bg: #EDF1F2;
+  --color-body-bg: #EDF1F2;
+  --color-cta: #FCD14F;
 }
 body {
-  background: var(--body-bg);
+  background: var(--color-body-bg);
 }
 body .tabs .indicator {
   background-color: transparent;
@@ -61,4 +62,19 @@ body .peopleForm .peopleForm__formGroup input[type=text] {
   padding-left: 15px;
   padding-right: 15px;
   width: calc(100% - 30px);
+}
+body .peopleForm .peopleFormButton {
+  color: black;
+  text-transform: unset;
+  box-shadow: none;
+  border: 1px solid #DAC86A;
+  font-weight: bold;
+  padding: 8px 45px;
+  height: auto;
+}
+body .peopleForm .peopleFormButton.-outline {
+  background: white;
+}
+body .peopleForm .peopleFormButton.-primary {
+  background: var(--color-cta);
 }
