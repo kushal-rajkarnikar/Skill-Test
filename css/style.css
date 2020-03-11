@@ -34,15 +34,30 @@ body .contract {
   height: auto;
   position: relative;
 }
+@media (max-width: 992px) {
+  body .contract {
+    padding-bottom: 30px;
+  }
+}
 body .contract > .nav-wrapper > .row {
   margin-bottom: 0;
 }
 body .contract .breadcrumb {
   color: black;
 }
+@media (max-width: 767px) {
+  body .contract .breadcrumb {
+    font-size: 14px;
+  }
+}
 body .contract .breadcrumb:first-child {
   color: #4AB6C2;
   font-size: 2em;
+}
+@media (max-width: 767px) {
+  body .contract .breadcrumb:first-child {
+    font-size: 14px;
+  }
 }
 body .contract .breadcrumb:before {
   color: black;
@@ -103,6 +118,11 @@ body .contract .btn-floating {
   bottom: -40px;
   background-color: #26559E;
 }
+@media (max-width: 992px) {
+  body .contract .btn-floating {
+    bottom: -60px;
+  }
+}
 body .personBlock {
   padding: 15px 20px;
   background: white;
@@ -110,6 +130,12 @@ body .personBlock {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  body .personBlock {
+    justify-content: flex-start;
+  }
 }
 body .personBlock .personBlock__remove {
   display: webkit-flex;
@@ -122,12 +148,27 @@ body .personBlock .personBlock__remove > a {
 body .personBlock .personBlock__remove > a > i {
   font-size: 2em;
 }
+@media (max-width: 767px) {
+  body .personBlock .personBlock__remove {
+    width: 60px;
+  }
+}
+@media (max-width: 575px) {
+  body .personBlock .personBlock__remove {
+    width: 40px;
+  }
+}
 body .personBlock.-nonremovable .personBlock__remove > a {
   visibility: hidden;
 }
 body .personBlock .personBlock__bio {
   display: -webkit-flex;
   display: flex;
+}
+@media (max-width: 767px) {
+  body .personBlock .personBlock__bio {
+    width: calc(100% - 60px);
+  }
 }
 body .personBlock .personBlock__bio .personBlock__avatar {
   width: 60px;
@@ -140,10 +181,28 @@ body .personBlock .personBlock__bio .personBlock__details {
   justify-content: center;
   padding-left: 15px;
 }
+@media (max-width: 575px) {
+  body .personBlock .personBlock__bio .personBlock__details {
+    word-break: break-all;
+  }
+}
 body .personBlock .personBlock__actions {
   display: webkit-flex;
   display: flex;
   align-items: center;
+}
+@media (max-width: 767px) {
+  body .personBlock .personBlock__actions {
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 575px) {
+  body .personBlock .personBlock__actions {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 body .personBlock .personBlock__actions .personBlock__dropdown {
   box-shadow: none;
@@ -154,6 +213,12 @@ body .personBlock .personBlock__actions .personBlock__dropdown {
   text-transform: unset;
   width: 125px;
   text-align: left;
+}
+@media (max-width: 575px) {
+  body .personBlock .personBlock__actions .personBlock__dropdown {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 body .personBlock .personBlock__actions .personBlock__dropdown i.material-icons {
   position: absolute;
@@ -170,6 +235,13 @@ body .personBlock .personBlock__setRole {
   display: flex;
   align-items: center;
 }
+@media (max-width: 575px) {
+  body .personBlock .personBlock__setRole {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
 body .personBlock .personBlock__setRole .personBlock__dropdown {
   box-shadow: none;
   background: #4AB6C2;
@@ -179,6 +251,12 @@ body .personBlock .personBlock__setRole .personBlock__dropdown {
   text-transform: unset;
   width: 125px;
   text-align: left;
+}
+@media (max-width: 575px) {
+  body .personBlock .personBlock__setRole .personBlock__dropdown {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 body .personBlock .personBlock__setRole .personBlock__dropdown i.material-icons {
   font-size: 1.25em;
@@ -252,6 +330,12 @@ body .peopleForm .peopleFormButton {
   font-weight: bold;
   padding: 5px 45px;
   height: auto;
+}
+@media (max-width: 767px) {
+  body .peopleForm .peopleFormButton {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 body .peopleForm .peopleFormButton.-outline {
   background: white;

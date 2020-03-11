@@ -45,14 +45,23 @@ body{
         padding-bottom: 10px;
         height: auto;
         position: relative;
+        @media (max-width: 992px) {
+            padding-bottom: 30px;
+        }
         & > .nav-wrapper > .row{
             margin-bottom: 0;
         }
         .breadcrumb{
             color: black;
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
             &:first-child{
                 color: @color-dropdown-bg;
                 font-size: 2em;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                }
             }     
             &:before{
                 color: black;
@@ -107,6 +116,9 @@ body{
             right: 0;
             bottom: -40px;
             background-color: @color-blue;
+            @media (max-width: 992px) {
+                bottom: -60px;
+            }
         }
     }   
     .personBlock{
@@ -116,6 +128,10 @@ body{
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+        flex-wrap: wrap;
+        @media (max-width: 767px) {
+            justify-content: flex-start;
+        }
         .personBlock__remove{
             .formDropdownWrapper();
             & > a{
@@ -124,6 +140,13 @@ body{
                     font-size: 2em;
                 }  
             } 
+            @media (max-width: 767px) {
+                width: 60px;
+            }
+            @media (max-width: 575px) {
+                width: 40px;
+            }
+
         }
         &.-nonremovable{
             .personBlock__remove{
@@ -135,6 +158,9 @@ body{
         .personBlock__bio {
             display: -webkit-flex;
             display: flex;  
+            @media (max-width: 767px) {
+                width: calc(100% - 60px);
+            }
             .personBlock__avatar {
                 width: 60px;
                 height: 60px;
@@ -145,16 +171,32 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 padding-left: 15px;
+                @media (max-width: 575px){
+                    word-break: break-all;
+                }
             }
         }
         .personBlock__actions{
             .formDropdownWrapper();
+            @media (max-width: 767px) {
+                margin-left: 60px;
+                margin-right: 10px;
+            }
+            @media (max-width: 575px) {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
             .personBlock__dropdown{
                 box-shadow: none;
                 background: @color-grey;
                 color: black;
                 position: relative;
-                padding-right: 40px;
+                padding-right: 40px; 
+                @media (max-width: 575px) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
                 i.material-icons{    
                     position: absolute;
                     right: 15px;
@@ -170,9 +212,18 @@ body{
         } 
         .personBlock__setRole{
             .formDropdownWrapper();
+            @media (max-width: 575px) {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
             .personBlock__dropdown{
                 box-shadow: none;
                 background: @color-dropdown-bg;
+                @media (max-width: 575px) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
                 .formDropdownWrapper();
                 i.material-icons{
                     font-size: 1.25em;
@@ -240,6 +291,10 @@ body{
             font-weight: bold;
             padding: 5px 45px;
             height: auto;
+            @media (max-width: 767px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
         }
         .peopleFormButton.-outline{
             background: white;
