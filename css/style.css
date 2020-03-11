@@ -2,6 +2,14 @@
   --color-body-bg: #EDF1F2;
   --color-cta: #FCD14F;
 }
+.formElement {
+  margin-top: 15px;
+  background: white;
+  border-bottom: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% - 30px);
+}
 body {
   background: var(--color-body-bg);
 }
@@ -46,6 +54,12 @@ body .personBlock .personBlock__bio .personBlock__details {
   justify-content: center;
   padding-left: 15px;
 }
+body .personBlock .personBlock__actions,
+body .personBlock .personBlock__setRole {
+  display: webkit-flex;
+  display: flex;
+  align-items: center;
+}
 body .peopleForm {
   margin-top: 30px;
 }
@@ -56,6 +70,14 @@ body .peopleForm .peopleForm__formGroup label.active {
   font-size: 1rem;
 }
 body .peopleForm .peopleForm__formGroup input[type=text] {
+  margin-top: 15px;
+  background: white;
+  border-bottom: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% - 30px);
+}
+body .peopleForm .peopleForm__formGroup select {
   margin-top: 15px;
   background: white;
   border-bottom: none;

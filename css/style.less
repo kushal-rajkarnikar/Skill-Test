@@ -3,6 +3,15 @@
     --color-cta: #FCD14F;
 }
 
+.formElement{
+    margin-top: 15px;
+    background: white;
+    border-bottom: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 30px);
+}
+
 body{
     background: var(--color-body-bg);
     .tabs{
@@ -44,6 +53,11 @@ body{
                 padding-left: 15px;
             }
         }
+        .personBlock__actions, .personBlock__setRole{
+            display: webkit-flex;
+            display: flex;
+            align-items: center;
+        }
     }
     .peopleForm{
         margin-top: 30px;
@@ -54,12 +68,10 @@ body{
                 font-size: 1rem;
             }
             input[type=text]{
-                margin-top: 15px;
-                background: white;
-                border-bottom: none;
-                padding-left: 15px;
-                padding-right: 15px;
-                width: calc(100% - 30px);
+               .formElement();
+            }
+            select{
+                .formElement();
             }
         }
         .peopleFormButton{
