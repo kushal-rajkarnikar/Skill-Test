@@ -34,6 +34,9 @@ body .contract {
   height: auto;
   position: relative;
 }
+body .contract > .nav-wrapper > .row {
+  margin-bottom: 0;
+}
 body .contract .breadcrumb {
   color: black;
 }
@@ -45,16 +48,40 @@ body .contract .breadcrumb:before {
   color: black;
   vertical-align: bottom;
 }
+body .contract .tabs {
+  height: auto;
+  display: flex;
+}
 body .contract .tabs .indicator {
   background-color: transparent;
 }
 body .contract .tabs .tab {
   text-transform: unset;
+  height: auto;
 }
 body .contract .tabs .tab a {
   color: #215098;
   font-weight: bold;
   background: none;
+  line-height: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+body .contract .tabs .tab a > i.material-icons {
+  color: green;
+  height: auto;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+body .contract .tabs .tab a > i.material-icons.edit {
+  font-size: 1em;
+  position: absolute;
+  left: 55px;
+  bottom: 35px;
 }
 body .contract .tabs .tab a:hover,
 body .contract .tabs .tab a.active,
@@ -64,10 +91,16 @@ body .contract .tabs .tab a:focus.active {
   background: #26559E;
   color: white;
 }
+body .contract .tabs .tab a:hover > i.material-icons,
+body .contract .tabs .tab a.active > i.material-icons,
+body .contract .tabs .tab a:focus > i.material-icons,
+body .contract .tabs .tab a:focus.active > i.material-icons {
+  color: #FCD14F;
+}
 body .contract .btn-floating {
   position: absolute;
   right: 0;
-  bottom: -60px;
+  bottom: -40px;
   background-color: #26559E;
 }
 body .personBlock {

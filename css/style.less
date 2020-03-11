@@ -45,6 +45,9 @@ body{
         padding-bottom: 10px;
         height: auto;
         position: relative;
+        & > .nav-wrapper > .row{
+            margin-bottom: 0;
+        }
         .breadcrumb{
             color: black;
             &:first-child{
@@ -57,27 +60,52 @@ body{
             }
         }
         .tabs{
+            height: auto;
+            display: flex;
             .indicator{
                 background-color: transparent;
             }
             .tab{
                 text-transform: unset;
+                height: auto;
                 a{
                     color: #215098;
                     font-weight: bold;
                     background: none;
+                    line-height: normal;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    & > i.material-icons{
+                        color: green;
+                        height: auto;
+                        line-height: normal;
+                        margin-bottom: 5px;
+                    }
+                    & > i.material-icons.edit{
+                        font-size: 1em;
+                        position: absolute;
+                        left: 55px;
+                        bottom: 35px;
+                    }
                 }
                 a:hover, a.active, a:focus, a:focus.active{
                     border-bottom: none;
                     background: @color-blue;
                     color: white;
-                }
+                    & > i.material-icons{
+                        color: @color-cta;
+                    }
+                }                
             }
         }
         .btn-floating{
             position: absolute;
             right: 0;
-            bottom: -60px;
+            bottom: -40px;
             background-color: @color-blue;
         }
     }   
