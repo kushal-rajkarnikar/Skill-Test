@@ -16,6 +16,9 @@
   width: 125px;
   text-align: left;
 }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 body {
   background: #EDF1F2;
 }
@@ -50,6 +53,7 @@ body .contract .tabs .tab {
 }
 body .contract .tabs .tab a {
   color: #215098;
+  font-weight: bold;
   background: none;
 }
 body .contract .tabs .tab a:hover,
@@ -73,6 +77,20 @@ body .personBlock {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+}
+body .personBlock .personBlock__remove {
+  display: webkit-flex;
+  display: flex;
+  align-items: center;
+}
+body .personBlock .personBlock__remove > a {
+  height: 2em;
+}
+body .personBlock .personBlock__remove > a > i {
+  font-size: 2em;
+}
+body .personBlock.-nonremovable .personBlock__remove > a {
+  visibility: hidden;
 }
 body .personBlock .personBlock__bio {
   display: -webkit-flex;
@@ -135,9 +153,26 @@ body .personBlock .personBlock__setRole .personBlock__dropdown i.material-icons 
 }
 body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content {
   border: 2px solid #4AB6C2;
+  width: auto !important;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li > span {
+  white-space: nowrap;
 }
 body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li > a {
   font-size: 14px;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li:first-child {
+  cursor: unset;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li:first-child:hover {
+  background: none;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li:first-child > a {
+  font-weight: bold;
+  color: black;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li:first-child > a:hover {
+  background: none;
 }
 body .peopleForm {
   margin-top: 30px;

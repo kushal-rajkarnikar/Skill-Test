@@ -5,6 +5,7 @@
 @color-grey: #ECF2F2;
 @color-dropdown-bg: #4AB6C2;
 
+//Mixins
 .formElement{
     margin-top: 15px;
     background: white;
@@ -24,6 +25,11 @@
     text-transform: unset;
     width: 125px;
     text-align: left;
+}
+
+//Utility Class
+.mb-0{
+    margin-bottom: 0 !important;
 }
 
 body{
@@ -58,6 +64,7 @@ body{
                 text-transform: unset;
                 a{
                     color: #215098;
+                    font-weight: bold;
                     background: none;
                 }
                 a:hover, a.active, a:focus, a:focus.active{
@@ -81,6 +88,22 @@ body{
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+        .personBlock__remove{
+            .formDropdownWrapper();
+            & > a{
+                height: 2em;
+                & > i{
+                    font-size: 2em;
+                }  
+            } 
+        }
+        &.-nonremovable{
+            .personBlock__remove{
+                & > a{
+                    visibility: hidden;
+                }
+            }
+        }
         .personBlock__bio {
             display: -webkit-flex;
             display: flex;  
@@ -130,8 +153,25 @@ body{
                 .formDropdown();
                 & + .dropdown-content{
                     border: 2px solid @color-dropdown-bg;
+                    width: auto !important;
+                    li > span {
+                        white-space: nowrap;
+                    }
                     li > a{
                         font-size: 14px;
+                    }
+                    li:first-child{
+                        cursor: unset;  
+                        &:hover{
+                            background: none;
+                        }
+                        & > a{
+                            font-weight: bold;
+                            color: black;
+                            &:hover{
+                                background: none;
+                            }
+                        }
                     }
                 }
             }
