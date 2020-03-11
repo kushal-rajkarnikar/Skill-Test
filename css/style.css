@@ -23,24 +23,37 @@ body h2 {
   font-size: 1.5em;
   font-weight: bold;
   color: #26559E;
+  margin-bottom: 35px;
 }
-body .tabs .indicator {
+body .contract {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+  position: relative;
+}
+body .contract .tabs .indicator {
   background-color: transparent;
 }
-body .tabs .tab {
+body .contract .tabs .tab {
   text-transform: unset;
 }
-body .tabs .tab a {
+body .contract .tabs .tab a {
   color: #215098;
   background: none;
 }
-body .tabs .tab a:hover,
-body .tabs .tab a.active,
-body .tabs .tab a:focus,
-body .tabs .tab a:focus.active {
+body .contract .tabs .tab a:hover,
+body .contract .tabs .tab a.active,
+body .contract .tabs .tab a:focus,
+body .contract .tabs .tab a:focus.active {
   border-bottom: none;
   background: #26559E;
   color: white;
+}
+body .contract .btn-floating {
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  background-color: #26559E;
 }
 body .personBlock {
   padding: 15px 20px;

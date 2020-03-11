@@ -32,24 +32,37 @@ body{
         font-size: 1.5em;
         font-weight: bold;
         color: @color-blue;
+        margin-bottom: 35px;
     }
-    .tabs{
-        .indicator{
-            background-color: transparent;
-        }
-        .tab{
-            text-transform: unset;
-            a{
-                color: #215098;
-                background: none;
+    .contract{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: auto;
+        position: relative;
+        .tabs{
+            .indicator{
+                background-color: transparent;
             }
-            a:hover, a.active, a:focus, a:focus.active{
-                border-bottom: none;
-                background: @color-blue;
-                color: white;
+            .tab{
+                text-transform: unset;
+                a{
+                    color: #215098;
+                    background: none;
+                }
+                a:hover, a.active, a:focus, a:focus.active{
+                    border-bottom: none;
+                    background: @color-blue;
+                    color: white;
+                }
             }
         }
-    }
+        .btn-floating{
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            background-color: @color-blue;
+        }
+    }   
     .personBlock{
         padding: 15px 20px;
         background: white;
@@ -122,14 +135,14 @@ body{
                 font-size: 1rem;
             }
             input[type=text]{
-               .formElement();
-               &:focus{
-                   border-bottom: none;
-                   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-               }
-               &:not(.browser-default):focus:not([readonly])+label{
-                   color: unset;
-               }
+                .formElement();
+                &:focus{
+                    border-bottom: none;
+                    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+                }
+                &:not(.browser-default):focus:not([readonly])+label{
+                    color: unset;
+                }
             }
             select{
                 .formElement();
