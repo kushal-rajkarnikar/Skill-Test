@@ -1,7 +1,9 @@
-:root {
-    --color-body-bg: #EDF1F2;
-    --color-cta: #FCD14F;
-}
+//Define colors
+@color-body-bg: #EDF1F2;
+@color-cta: #FCD14F;
+@color-blue: #26559E;
+@color-grey: #ECF2F2;
+@color-dropdown-bg: #4AB6C2;
 
 .formElement{
     margin-top: 15px;
@@ -12,8 +14,25 @@
     width: calc(100% - 30px);
 }
 
+.formDropdownWrapper{
+    display: webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.formDropdown{
+    text-transform: unset;
+    width: 125px;
+    text-align: left;
+}
+
 body{
-    background: var(--color-body-bg);
+    background: @color-body-bg;
+    h2{
+        font-size: 1.5em;
+        font-weight: bold;
+        color: @color-blue;
+    }
     .tabs{
         .indicator{
             background-color: transparent;
@@ -26,7 +45,7 @@ body{
             }
             a:hover, a.active, a:focus, a:focus.active{
                 border-bottom: none;
-                background: blue;
+                background: @color-blue;
                 color: white;
             }
         }
@@ -53,10 +72,22 @@ body{
                 padding-left: 15px;
             }
         }
-        .personBlock__actions, .personBlock__setRole{
-            display: webkit-flex;
-            display: flex;
-            align-items: center;
+        .personBlock__actions{
+            .formDropdownWrapper();
+            .personBlock__dropdown{
+                box-shadow: none;
+                background: @color-grey;
+                color: black;
+                .formDropdown();   
+            }
+        } 
+        .personBlock__setRole{
+            .formDropdownWrapper();
+            .personBlock__dropdown{
+                box-shadow: none;
+                background: @color-dropdown-bg;
+                .formDropdown()
+            }
         }
     }
     .peopleForm{
@@ -80,14 +111,14 @@ body{
             box-shadow: none;
             border: 1px solid #DAC86A;
             font-weight: bold;
-            padding: 8px 45px;
+            padding: 5px 45px;
             height: auto;
         }
         .peopleFormButton.-outline{
             background: white;
         }
         .peopleFormButton.-primary{
-            background: var(--color-cta);
+            background: @color-cta;
         }
     }
 }

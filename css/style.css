@@ -1,7 +1,3 @@
-:root {
-  --color-body-bg: #EDF1F2;
-  --color-cta: #FCD14F;
-}
 .formElement {
   margin-top: 15px;
   background: white;
@@ -10,8 +6,23 @@
   padding-right: 15px;
   width: calc(100% - 30px);
 }
+.formDropdownWrapper {
+  display: webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.formDropdown {
+  text-transform: unset;
+  width: 125px;
+  text-align: left;
+}
 body {
-  background: var(--color-body-bg);
+  background: #EDF1F2;
+}
+body h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #26559E;
 }
 body .tabs .indicator {
   background-color: transparent;
@@ -28,7 +39,7 @@ body .tabs .tab a.active,
 body .tabs .tab a:focus,
 body .tabs .tab a:focus.active {
   border-bottom: none;
-  background: blue;
+  background: #26559E;
   color: white;
 }
 body .personBlock {
@@ -54,11 +65,30 @@ body .personBlock .personBlock__bio .personBlock__details {
   justify-content: center;
   padding-left: 15px;
 }
-body .personBlock .personBlock__actions,
+body .personBlock .personBlock__actions {
+  display: webkit-flex;
+  display: flex;
+  align-items: center;
+}
+body .personBlock .personBlock__actions .personBlock__dropdown {
+  box-shadow: none;
+  background: #ECF2F2;
+  color: black;
+  text-transform: unset;
+  width: 125px;
+  text-align: left;
+}
 body .personBlock .personBlock__setRole {
   display: webkit-flex;
   display: flex;
   align-items: center;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown {
+  box-shadow: none;
+  background: #4AB6C2;
+  text-transform: unset;
+  width: 125px;
+  text-align: left;
 }
 body .peopleForm {
   margin-top: 30px;
@@ -91,12 +121,12 @@ body .peopleForm .peopleFormButton {
   box-shadow: none;
   border: 1px solid #DAC86A;
   font-weight: bold;
-  padding: 8px 45px;
+  padding: 5px 45px;
   height: auto;
 }
 body .peopleForm .peopleFormButton.-outline {
   background: white;
 }
 body .peopleForm .peopleFormButton.-primary {
-  background: var(--color-cta);
+  background: #FCD14F;
 }
