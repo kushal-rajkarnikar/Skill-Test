@@ -78,7 +78,19 @@ body{
                 box-shadow: none;
                 background: @color-grey;
                 color: black;
+                position: relative;
+                padding-right: 40px;
+                i.material-icons{    
+                    position: absolute;
+                    right: 15px;
+                }
                 .formDropdown();   
+                & + .dropdown-content{
+                    border: 2px solid @color-dropdown-bg;
+                    li > a{
+                        font-size: 14px;
+                    }
+                }
             }
         } 
         .personBlock__setRole{
@@ -91,7 +103,13 @@ body{
                     font-size: 1.25em;
                     margin-right: 10px;
                 }
-                .formDropdown()
+                .formDropdown();
+                & + .dropdown-content{
+                    border: 2px solid @color-dropdown-bg;
+                    li > a{
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }
@@ -105,6 +123,13 @@ body{
             }
             input[type=text]{
                .formElement();
+               &:focus{
+                   border-bottom: none;
+                   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+               }
+               &:not(.browser-default):focus:not([readonly])+label{
+                   color: unset;
+               }
             }
             select{
                 .formElement();
@@ -121,6 +146,9 @@ body{
         }
         .peopleFormButton.-outline{
             background: white;
+        }
+        .peopleFormButton.-back{
+            margin-right: 15px;
         }
         .peopleFormButton.-primary{
             background: @color-cta;

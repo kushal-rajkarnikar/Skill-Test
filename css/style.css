@@ -74,9 +74,21 @@ body .personBlock .personBlock__actions .personBlock__dropdown {
   box-shadow: none;
   background: #ECF2F2;
   color: black;
+  position: relative;
+  padding-right: 40px;
   text-transform: unset;
   width: 125px;
   text-align: left;
+}
+body .personBlock .personBlock__actions .personBlock__dropdown i.material-icons {
+  position: absolute;
+  right: 15px;
+}
+body .personBlock .personBlock__actions .personBlock__dropdown + .dropdown-content {
+  border: 2px solid #4AB6C2;
+}
+body .personBlock .personBlock__actions .personBlock__dropdown + .dropdown-content li > a {
+  font-size: 14px;
 }
 body .personBlock .personBlock__setRole {
   display: webkit-flex;
@@ -97,6 +109,12 @@ body .personBlock .personBlock__setRole .personBlock__dropdown i.material-icons 
   font-size: 1.25em;
   margin-right: 10px;
 }
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content {
+  border: 2px solid #4AB6C2;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-content li > a {
+  font-size: 14px;
+}
 body .peopleForm {
   margin-top: 30px;
 }
@@ -113,6 +131,13 @@ body .peopleForm .peopleForm__formGroup input[type=text] {
   padding-left: 15px;
   padding-right: 15px;
   width: calc(100% - 30px);
+}
+body .peopleForm .peopleForm__formGroup input[type=text]:focus {
+  border-bottom: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+body .peopleForm .peopleForm__formGroup input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+  color: unset;
 }
 body .peopleForm .peopleForm__formGroup select {
   margin-top: 15px;
@@ -133,6 +158,9 @@ body .peopleForm .peopleFormButton {
 }
 body .peopleForm .peopleFormButton.-outline {
   background: white;
+}
+body .peopleForm .peopleFormButton.-back {
+  margin-right: 15px;
 }
 body .peopleForm .peopleFormButton.-primary {
   background: #FCD14F;

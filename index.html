@@ -13,9 +13,10 @@
 </head>
 
 <body>
-  <nav class="white nav-" role="navigation">
+  <nav class="white" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Employment Contract</a>
     </div>
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
   </nav>
   
   <div class="container">
@@ -46,9 +47,9 @@
               
             </div>
             <div id="people" class="col s12">
-             <h2>
+              <h2>
                 Who should have access to this document?
-             </h2>
+              </h2>
               <div class="personBlock -nonremovable">
                 <div class="personBlock__remove">
                   <a href="#/">
@@ -69,7 +70,7 @@
                   </div>
                 </div>
                 <div class="personBlock__actions">
-                  <a class='dropdown-trigger personBlock__dropdown btn' href='#' data-target='dropdown1'>Edit</a>
+                  <a class='dropdown-trigger personBlock__dropdown btn' href='#' data-target='dropdown1'>Edit <i class="material-icons">arrow_drop_down</i></a>
                   <ul id='dropdown1' class='dropdown-content'>
                     <li><a href="#!">Edit</a></li>
                     <li><a href="#!">View</a></li>
@@ -80,6 +81,7 @@
                 <div class="personBlock__setRole">
                   <a class='dropdown-trigger personBlock__dropdown btn' href='#' data-target='dropdown2'><i class="material-icons">edit</i>Signer</a>
                   <ul id='dropdown2' class='dropdown-content'>
+                    <li><a href="#!">Signing as</a></li>
                     <li><a href="#!">a director</a></li>
                     <li><a href="#!">an authorized signatory</a></li>
                     <li><a href="#!">employer</a></li>
@@ -94,7 +96,7 @@
                 </div>
                 
                 <div class="col s12">
-                  <button class="btn waves-effect peopleFormButton -outline"  name="action">
+                  <button class="btn waves-effect peopleFormButton -outline -back"  name="action">
                     Back
                   </button>
                   
@@ -125,13 +127,13 @@
     //initialize tabs
     var tabs = document.querySelectorAll('.tabs')
     for (var i = 0; i < tabs.length; i++){
-      M.Tabs.init(tabs[i]);
-      
-      // initialize dropdown
-      var elems = document.querySelectorAll('.dropdown-trigger');
-      var options = { coverTrigger: false }
-      var instances = M.Dropdown.init(elems, options);
+      M.Tabs.init(tabs[i])
     }
+    
+    // initialize dropdown
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var options = { coverTrigger: false }
+    var instances = M.Dropdown.init(elems, options);
   </script>
 </body>
 </html>
