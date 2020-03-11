@@ -86,9 +86,16 @@ body .personBlock .personBlock__setRole {
 body .personBlock .personBlock__setRole .personBlock__dropdown {
   box-shadow: none;
   background: #4AB6C2;
+  display: webkit-flex;
+  display: flex;
+  align-items: center;
   text-transform: unset;
   width: 125px;
   text-align: left;
+}
+body .personBlock .personBlock__setRole .personBlock__dropdown i.material-icons {
+  font-size: 1.25em;
+  margin-right: 10px;
 }
 body .peopleForm {
   margin-top: 30px;
