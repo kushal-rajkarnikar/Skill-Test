@@ -140,10 +140,15 @@ body{
     .peopleForm{
         margin-top: 30px;
         .peopleForm__formGroup{
+            &>label{
+                position: relative;
+                transform: none;
+                left: 0;
+            }
             label, label.active{
                 font-weight: bold;
                 color: black;
-                font-size: 1rem;
+                font-size: 15px;
             }
             input[type=text]{
                 .formElement();

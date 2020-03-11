@@ -142,11 +142,16 @@ body .personBlock .personBlock__setRole .personBlock__dropdown + .dropdown-conte
 body .peopleForm {
   margin-top: 30px;
 }
+body .peopleForm .peopleForm__formGroup > label {
+  position: relative;
+  transform: none;
+  left: 0;
+}
 body .peopleForm .peopleForm__formGroup label,
 body .peopleForm .peopleForm__formGroup label.active {
   font-weight: bold;
   color: black;
-  font-size: 1rem;
+  font-size: 15px;
 }
 body .peopleForm .peopleForm__formGroup input[type=text] {
   margin-top: 15px;
