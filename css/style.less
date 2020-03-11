@@ -1,3 +1,47 @@
 :root {
     --body-bg: #EDF1F2;
 }
+
+body{
+    background: var(--body-bg);
+    .tabs{
+        .indicator{
+            background-color: transparent;
+        }
+        .tab{
+            text-transform: unset;
+            a{
+                color: #215098;
+                background: none;
+            }
+            a:hover, a.active, a:focus, a:focus.active{
+                border-bottom: none;
+                background: blue;
+                color: white;
+            }
+        }
+    }
+    .personBlock{
+        padding: 15px 20px;
+        background: white;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .personBlock__bio {
+            display: -webkit-flex;
+            display: flex;  
+            .personBlock__avatar {
+                width: 60px;
+                height: 60px;
+            }
+            .personBlock__details{
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 15px;
+            }
+        }
+    }
+}

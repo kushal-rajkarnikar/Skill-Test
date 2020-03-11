@@ -1,3 +1,47 @@
 :root {
   --body-bg: #EDF1F2;
 }
+body {
+  background: var(--body-bg);
+}
+body .tabs .indicator {
+  background-color: transparent;
+}
+body .tabs .tab {
+  text-transform: unset;
+}
+body .tabs .tab a {
+  color: #215098;
+  background: none;
+}
+body .tabs .tab a:hover,
+body .tabs .tab a.active,
+body .tabs .tab a:focus,
+body .tabs .tab a:focus.active {
+  border-bottom: none;
+  background: blue;
+  color: white;
+}
+body .personBlock {
+  padding: 15px 20px;
+  background: white;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+body .personBlock .personBlock__bio {
+  display: -webkit-flex;
+  display: flex;
+}
+body .personBlock .personBlock__bio .personBlock__avatar {
+  width: 60px;
+  height: 60px;
+}
+body .personBlock .personBlock__bio .personBlock__details {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
