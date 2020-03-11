@@ -45,3 +45,20 @@ body .personBlock .personBlock__bio .personBlock__details {
   justify-content: center;
   padding-left: 15px;
 }
+body .peopleForm {
+  margin-top: 30px;
+}
+body .peopleForm .peopleForm__formGroup label,
+body .peopleForm .peopleForm__formGroup label.active {
+  font-weight: bold;
+  color: black;
+  font-size: 1rem;
+}
+body .peopleForm .peopleForm__formGroup input[type=text] {
+  margin-top: 15px;
+  background: white;
+  border-bottom: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% - 30px);
+}
