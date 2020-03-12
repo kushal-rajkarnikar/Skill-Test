@@ -67,6 +67,12 @@ body{
                 color: black;
                 vertical-align: bottom;
             }
+            & i.material-icons.-relative{
+                float: none;
+                color: @color-blue;
+                font-size: 20px;
+                transform: translateY(4px);
+            }
         }
         .tabs{
             height: auto;
@@ -88,11 +94,33 @@ body{
                     flex-direction: column;
                     justify-content: center;
                     position: relative;
+                    &:before{
+                        content: '';
+                        width: 50%;
+                        height: 1px;
+                        border-top:1px dashed @color-blue;
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        z-index: 0;
+                    }
+                    &:after{
+                        content: '';
+                        width: 50%;
+                        height: 1px;
+                        border-top:1px dashed @color-blue;
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        z-index: 1;
+                    }
                     & > i.material-icons{
                         color: green;
                         height: auto;
                         line-height: normal;
                         margin-bottom: 5px;
+                        z-index: 2;
+                        position: relative;
                     }
                     & > i.material-icons.edit{
                         font-size: 1em;
@@ -103,6 +131,16 @@ body{
                             left: unset;
                             right: 10px;
                         }
+                    }
+                }
+                &:nth-last-of-type(2){
+                    a:before, a:after{
+                        border: none;
+                    }
+                }
+                &:nth-last-of-type(3){
+                    a:after{
+                        border: none;
                     }
                 }
                 a:hover, a.active, a:focus, a:focus.active{

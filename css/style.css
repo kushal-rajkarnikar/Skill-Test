@@ -63,6 +63,12 @@ body .contract .breadcrumb:before {
   color: black;
   vertical-align: bottom;
 }
+body .contract .breadcrumb i.material-icons.-relative {
+  float: none;
+  color: #26559E;
+  font-size: 20px;
+  transform: translateY(4px);
+}
 body .contract .tabs {
   height: auto;
   display: flex;
@@ -86,11 +92,33 @@ body .contract .tabs .tab a {
   justify-content: center;
   position: relative;
 }
+body .contract .tabs .tab a:before {
+  content: '';
+  width: 50%;
+  height: 1px;
+  border-top: 1px dashed #26559E;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 0;
+}
+body .contract .tabs .tab a:after {
+  content: '';
+  width: 50%;
+  height: 1px;
+  border-top: 1px dashed #26559E;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 1;
+}
 body .contract .tabs .tab a > i.material-icons {
   color: green;
   height: auto;
   line-height: normal;
   margin-bottom: 5px;
+  z-index: 2;
+  position: relative;
 }
 body .contract .tabs .tab a > i.material-icons.edit {
   font-size: 1em;
@@ -103,6 +131,13 @@ body .contract .tabs .tab a > i.material-icons.edit {
     left: unset;
     right: 10px;
   }
+}
+body .contract .tabs .tab:nth-last-of-type(2) a:before,
+body .contract .tabs .tab:nth-last-of-type(2) a:after {
+  border: none;
+}
+body .contract .tabs .tab:nth-last-of-type(3) a:after {
+  border: none;
 }
 body .contract .tabs .tab a:hover,
 body .contract .tabs .tab a.active,
